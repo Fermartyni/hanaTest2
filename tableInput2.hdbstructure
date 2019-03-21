@@ -1,0 +1,6 @@
+table.schemaName = "S0016401420";
+table.columns = [
+    {name = "KeyA"; sqlType = NVARCHAR; length = 100;},
+    {name = "KeyB"; sqlType = NVARCHAR; length = 100;},
+    {name = "MESSAGE"; sqlType = NVARCHAR; length = 100;}
+];

@@ -1,0 +1,9 @@
+table.schemaName = "S0016401420";
+table.tableType = COLUMNSTORE;
+table.columns = [
+    {name = "ID"; sqlType = INTEGER; nullable = false;},
+    {name = "COLUMN_A"; sqlType = NVARCHAR; length = 100;},
+    {name = "COLUMN_B"; sqlType = NVARCHAR; length = 100;},
+    {name = "MESSAGE"; sqlType = NVARCHAR; length = 100;} 
+];
+table.primaryKey.pkcolumns = ["ID"];

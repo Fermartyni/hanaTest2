@@ -1,0 +1,21 @@
+procedure "S0016401420"."fms_workspace.P2Test::createMethod2"
+     (IN new "S0016401420"."fms_workspace.P2Test::table2", OUT error "S0016401420"."fms_workspace.P1Test::error") 
+language sqlscript 
+sql security invoker as 
+    a NVARCHAR(100);
+    b NVARCHAR(100);
+    message NVARCHAR(100);
+    id INT;
+begin
+    select MESSAGE, COLUMN_A, COLUMN_B into message, a, b from :new;
+    --select COLUMN_A into a from :new;
+    
+     if 1 = 0 then
+        error = select 400 as http_status_code, 
+               'invalid ID' error_message, 
+               'value must be >= 1000' detail from dummy;
+     else
+        insert into "fms_workspace.P2Test::table2" values ("S0016401420"."fms_workspace.P2Test::KeyAB".nextval, :message, :a, :b);
+    end if; 
+   -- commit;
+end;

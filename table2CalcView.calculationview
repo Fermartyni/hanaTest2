@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="table2CalcView" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="2.3" defaultClient="$$client$$" visibility="internal" outputViewType="Projection" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="table2CalcView"/>
+<defaultSchema schemaName="S0016401420"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="fms_workspace.P2Test::table2" type="DATA_BASE_TABLE">
+    <viewAttributes allViewAttributes="true"/>
+    <columnObject schemaName="S0016401420" columnObjectName="fms_workspace.P2Test::table2"/>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="fms_workspace.P2Test::table2">
+  <attributes>
+    <attribute id="MESSAGE" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MESSAGE"/>
+      <keyMapping schemaName="S0016401420" columnObjectName="fms_workspace.P2Test::table2" columnName="MESSAGE"/>
+    </attribute>
+    <attribute id="ID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping schemaName="S0016401420" columnObjectName="fms_workspace.P2Test::table2" columnName="ID"/>
+    </attribute>
+    <attribute id="COLUMN_A" key="true" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COLUMN_A"/>
+      <keyMapping schemaName="S0016401420" columnObjectName="fms_workspace.P2Test::table2" columnName="COLUMN_A"/>
+    </attribute>
+    <attribute id="COLUMN_B" key="true" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COLUMN_B"/>
+      <keyMapping schemaName="S0016401420" columnObjectName="fms_workspace.P2Test::table2" columnName="COLUMN_B"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
